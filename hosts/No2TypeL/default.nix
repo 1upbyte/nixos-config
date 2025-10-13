@@ -50,7 +50,7 @@
     loader.systemd-boot.enable = lib.mkForce false;
     lanzaboote = {
       enable = true;
-      pkiBundle = "/etc/secureboot";
+      pkiBundle = "/var/lib/sbctl";
     };
     # Required by IWD to decrypt 802.1x EAP-TLS TLS client keys
     kernelModules = [ "pkcs8_key_parser" ];
