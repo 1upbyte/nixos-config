@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
   config = {
     services = {
@@ -11,7 +11,13 @@
     };
     hardware.sane = {
       enable = true;
-      extraBackends = [ pkgs.epkowa ];
+      extraBackends = [
+        (pkgs.epkowa.override {
+          plugins = {
+            inherit (pkgs.epkowa.plugins) ds30;
+          };
+        })
+      ];
     };
   };
 }
