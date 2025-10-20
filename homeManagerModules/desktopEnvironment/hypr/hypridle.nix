@@ -16,7 +16,11 @@ in
         general = {
           lock_cmd = "pidof hyprlock || ${hyprlock}";
           before_sleep_cmd = "loginctl lock-session";
-          after_sleep_cmd = if osConfig.programs.hyprland.enable then "${hyprctl} dispatch dpms on" else "niri msg action power-on-monitors";
+          after_sleep_cmd =
+            if osConfig.programs.hyprland.enable then
+              "${hyprctl} dispatch dpms on"
+            else
+              "niri msg action power-on-monitors";
         };
 
         listener = [
@@ -26,8 +30,16 @@ in
           }
           {
             timeout = 150;
-            on-timeout = if osConfig.programs.hyprland.enable then "${hyprctl} dispatch dpms off" else "niri msg action power-off-monitors";
-            on-resume = if osConfig.programs.hyprland.enable then "${hyprctl} dispatch dpms on" else "niri msg action power-on-monitors";
+            on-timeout =
+              if osConfig.programs.hyprland.enable then
+                "${hyprctl} dispatch dpms off"
+              else
+                "niri msg action power-off-monitors";
+            on-resume =
+              if osConfig.programs.hyprland.enable then
+                "${hyprctl} dispatch dpms on"
+              else
+                "niri msg action power-on-monitors";
           }
         ];
       };

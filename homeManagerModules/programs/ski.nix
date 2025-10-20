@@ -12,7 +12,10 @@
       pairs = {
         yk = {
           name = "yk_9767";
-          default_roles = [ "auth" "sign" ];
+          default_roles = [
+            "auth"
+            "sign"
+          ];
         };
         t2a = {
           name = "t2_5610_auth";

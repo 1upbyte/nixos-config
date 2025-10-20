@@ -3,9 +3,11 @@
   pkgs,
   osConfig,
   ...
-}: let
-    playerctl = lib.getExe pkgs.playerctl;
-in {
+}:
+let
+  playerctl = lib.getExe pkgs.playerctl;
+in
+{
   xdg.configFile."niri/config.kdl".text = ''
     prefer-no-csd
 
@@ -152,7 +154,7 @@ in {
 
     layout {
       background-color "transparent"
-    
+
       focus-ring {
         off
       }

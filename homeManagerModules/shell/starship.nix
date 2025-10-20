@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.starship = {
     enable = true;
     enableTransience = true;
@@ -6,13 +7,13 @@
       format = "$username$hostname$directory$git_branch$git_state$git_status$cmd_duration$fill$nix_shell$line_break$python$character";
 
       directory.style = "bold lavender";
-      
+
       character = {
         success_symbol = "[❯](mauve)";
         error_symbol = "[❯](red)";
         vimcmd_symbol = "[❮](green)";
       };
-      
+
       git_branch = {
         format = "[$branch]($style)";
         style = "bold mauve";
