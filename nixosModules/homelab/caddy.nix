@@ -12,7 +12,7 @@ let
       "github.com/caddy-dns/cloudflare@v0.2.1"
       "github.com/WeidiDeng/caddy-cloudflare-ip@v0.0.0-20231130002422-f53b62aa13cb"
     ];
-    hash = "sha256-wl8QrW503vtcjRX/0O2yyD9C/Hkg1C24B3muyQk/Jeo=";
+    hash = "sha256-0nsqhRop8ioUFNIxc0w+rFS4hq5xK2ZvDSDWfKUNTjc=";
   };
 in
 {
