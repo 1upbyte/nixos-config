@@ -15,10 +15,6 @@ in
       scale 2.0
     }
 
-    environment {
-      DISPLAY ":0"
-    }
-
     input {
       focus-follows-mouse
         touchpad {
@@ -201,24 +197,6 @@ in
         Wants = [ "graphical-session-pre.target" ];
         After = [ "graphical-session-pre.target" ];
       };
-    };
-
-    services.xwayland-satellite = {
-      Unit = {
-        Description = "Xwayland outside your Wayland";
-        BindsTo = "graphical-session.target";
-        PartOf = "graphical-session.target";
-        After = "graphical-session.target";
-        Requisite = "graphical-session.target";
-      };
-      Service = {
-        Type = "notify";
-        NotifyAccess = "all";
-        ExecStart = "${lib.getExe pkgs.xwayland-satellite}";
-        StandardOutput = "journal";
-      };
-
-      Install.WantedBy = [ "graphical-session.target" ];
     };
   };
 }
