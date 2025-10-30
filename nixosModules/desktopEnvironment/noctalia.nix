@@ -4,5 +4,5 @@
     inputs.noctalia.nixosModules.default
   ];
 
-  services.noctalia-shell.enable = true;
+  services.noctalia-shell.enable = false;
 }

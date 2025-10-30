@@ -186,6 +186,7 @@ in
 
     spawn-at-startup "${pkgs.writeShellScript "niri-init.sh" "${pkgs.dbus}/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP && systemctl --user stop niri-session.target && systemctl --user start niri-session.target"}"
     spawn-at-startup "${lib.getExe pkgs.swaybg}" "-m" "fill" "-i" "${osConfig.desktopAssets.wallpaper}"
+    spawn-at-startup "noctalia-shell"
   '';
 
   systemd.user = {
