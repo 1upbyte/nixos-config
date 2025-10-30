@@ -4,5 +4,6 @@ _: {
     ./greetd.nix
     ./hyprland.nix
     ./niri.nix
+    ./noctalia.nix
   ];
 }

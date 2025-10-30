@@ -4,5 +4,6 @@ _: {
     ./niri
     # ./eww
     ./clipboard.nix
+    ./noctalia.nix
   ];
 }
