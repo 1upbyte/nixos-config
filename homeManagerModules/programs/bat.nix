@@ -1,14 +1,7 @@
-{ pkgs, ... }:
+_:
 {
-  programs.bat = {
-    enable = true;
-    extraPackages = with pkgs.bat-extras; [
-      batman
-      batgrep
-      batwatch
-    ];
-  };
+  programs.bat.enable = true;
   home.shellAliases = {
-    cat = "bat";
+    cat = "bat -pp";
   };
 }
