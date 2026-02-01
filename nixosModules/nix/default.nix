@@ -1,7 +1,6 @@
 { inputs, ... }:
 {
   imports = [
-    ./builders.nix
     ./substituters.nix
     ./agenix.nix
     ./nh.nix

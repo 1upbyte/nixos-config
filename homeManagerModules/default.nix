@@ -5,19 +5,15 @@
 }:
 {
   imports = [
-    ./desktopEnvironment
     ./programs
-    ./shell
-    ./avatar.nix
     ./catppuccin.nix
-    ./gtk.nix
   ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home = {
-    username = "cblkjs";
-    homeDirectory = "/home/cblkjs";
+    username = "pablo";
+    homeDirectory = "/home/pablo";
 
     # This value determines the Home Manager release that your
     # configuration is compatible with. This helps avoid breakage
@@ -27,10 +23,9 @@
     # You can update Home Manager without changing this value. See
     # the Home Manager release notes for a list of state version
     # changes in each release.
-    stateVersion = "23.05";
+    stateVersion = "25.11";
   };
 
-  avatar = ./meow.png;
 
   programs = {
     # Let Home Manager install and manage itself.
@@ -41,8 +36,6 @@
       homedir = "${config.xdg.dataHome}/gnupg";
     };
 
-    ncspot.enable = true;
-    eza.enable = true;
     btop.enable = true;
   };
 
@@ -52,7 +45,7 @@
     jellyfin-mpv-shim
     pavucontrol
     p7zip
-    obsidian
+    # obsidian
     # julia
   ];
 

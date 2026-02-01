@@ -4,14 +4,9 @@
   ...
 }:
 {
-  config = lib.mkIf (builtins.elem "audio" config.systemAttributes.capabilities) {
+  config = {
     services.pipewire = {
       enable = true;
-      wireplumber.extraConfig."10-disable-camera" = {
-        "wireplumber.profiles" = {
-          main."monitor.libcamera" = "disabled";
-        };
-      };
       alsa = {
         enable = true;
         support32Bit = true;

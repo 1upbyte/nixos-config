@@ -4,7 +4,7 @@
   ...
 }:
 {
-  config = lib.mkIf config.systemAttributes.graphical {
+  config = {
     programs.chromium = {
       enable = true;
       extraOpts = {

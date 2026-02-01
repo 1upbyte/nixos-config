@@ -2,7 +2,7 @@ _: {
   programs.yazi = {
     enable = true;
     shellWrapperName = "y";
-    enableZshIntegration = true;
+    enableBashIntegration = true;
     settings = {
       manager = {
         show_hidden = true;

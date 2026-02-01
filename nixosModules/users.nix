@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   users = {
-    defaultUserShell = pkgs.fish;
-    users.cblkjs = {
-      hashedPasswordFile = "/persist/secrets/cblkjs-passwd";
+    defaultUserShell = pkgs.bash;
+    users.pablo = {
+      hashedPasswordFile = "${config.age.secrets.passwd-pixel.path}";
       isNormalUser = true;
       extraGroups = [
         "wheel"

@@ -1,18 +1,11 @@
 { pkgs, ... }:
 {
   imports = [
-    ./authentication
-    ./desktopEnvironment
-    ./gaming
-    ./homelab
-    ./impermanence
     ./network
     ./nix
     ./programs
     ./services
-    ./catppuccin.nix
     ./home-manager.nix
-    ./systemAttributes.nix
     ./users.nix
     ./shell
   ];

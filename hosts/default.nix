@@ -8,16 +8,14 @@ let
   mkNixosConfigurations =
     hosts:
     genAttrs hosts (
-      host:
+      hostname:
       nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs hostname; };
         modules = [
-          ./${host}
+          ./${hostname}
 
           # Common modules
           ../nixosModules
-          inputs.disko.nixosModules.disko
-          inputs.lanzaboote.nixosModules.lanzaboote
           inputs.nix-index-database.nixosModules.nix-index
         ];
       }
@@ -25,10 +23,8 @@ let
 in
 {
   flake.nixosConfigurations = mkNixosConfigurations [
-    "lap"
-    "tower"
-    "No2TypeL"
-    "No2TypeT"
-    "No3TypeL"
+    # "doraemon"
+    # "dorami"
+    "pixel"
   ];
 }
