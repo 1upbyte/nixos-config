@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 {
   users = {
     defaultUserShell = pkgs.bash;
-    users.pablo = {
+    users.${username} = {
       hashedPasswordFile = "${config.age.secrets.passwd-pixel.path}";
       isNormalUser = true;
       extraGroups = [

@@ -10,8 +10,8 @@
     "/etc/ssh/ssh_host_ed25519_key"
   ];
   
-  age.secrets.tailscale-pixel = {
-    file = ../../secrets/tailscale-pixel.age;
+  age.secrets.netbird-pixel= {
+    file = ../../secrets/netbird-pixel.age;
     mode = "440";
     group = "users";
   };

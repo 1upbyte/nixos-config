@@ -6,6 +6,6 @@ let
   systems = [ doraemon dorami ];
 in
 {
-  "tailscale-pixel.age".publicKeys = [ pixel ];
   "passwd-pixel.age".publicKeys = [ pixel ];
+  "netbird-pixel.age".publicKeys = [ pixel ];
 }

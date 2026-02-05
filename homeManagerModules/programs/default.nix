@@ -8,6 +8,7 @@ _: {
     ./mpv.nix
     ./bash.nix
     ./zoxide.nix
+    ./plasma.nix
   ];
   programs.nix-index.enable = true;
 }
