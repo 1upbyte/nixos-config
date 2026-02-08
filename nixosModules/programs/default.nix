@@ -5,6 +5,6 @@ _: {
     ./tmux.nix
     ./greetd.nix
     ./plasma.nix
-    ./netbird.nix
+    ./tailscale.nix
   ];
 }

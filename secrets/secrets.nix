@@ -7,5 +7,5 @@ let
 in
 {
   "passwd-pixel.age".publicKeys = [ pixel ];
-  "netbird-pixel.age".publicKeys = [ pixel ];
+  "tailscale.age".publicKeys = [ pixel ];
 }
