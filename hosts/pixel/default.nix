@@ -9,6 +9,13 @@
     ./hardware-configuration.nix
   ];
 
+  # Required for the VirtIO-GPU 3D pipeline to initialize
+  boot.initrd.kernelModules = [ "virtio_gpu" ];
+  hardware.graphics.enable = true; 
+
+  # Required for D-Bus to communicate with the guest UI
+  services.spice-vdagentd.enable = true;
+
   networking = {
     hostName = "${hostname}";
     nameservers = [
