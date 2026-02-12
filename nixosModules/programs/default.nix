@@ -6,5 +6,6 @@ _: {
     ./greetd.nix
     ./plasma.nix
     ./tailscale.nix
+    ./helium.nix
   ];
 }
