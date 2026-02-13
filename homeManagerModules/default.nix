@@ -7,6 +7,7 @@
   imports = [
     ./programs
     ./catppuccin.nix
+    ./avatar.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -26,6 +27,7 @@
     stateVersion = "25.11";
   };
 
+  avatar = /etc/nixos/assets/mario.png;
 
   programs = {
     # Let Home Manager install and manage itself.
