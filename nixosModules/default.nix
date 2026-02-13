@@ -9,7 +9,8 @@
     ./users.nix
     ./shell
   ];
-
+  
+  programs.nix-ld.enable = true;
   services.upower.enable = true;
   users.mutableUsers = false;
   security.rtkit.enable = true;
