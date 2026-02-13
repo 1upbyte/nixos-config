@@ -6,6 +6,8 @@
     overrideConfig = true;
     workspace = {
       wallpaper = /etc/nixos/assets/majora-wallpaper.png;
+      colorScheme = "BreezeDark";
     };
+    session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
   };
 }
