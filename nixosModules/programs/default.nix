@@ -7,5 +7,6 @@ _: {
     ./plasma.nix
     ./tailscale.nix
     ./helium.nix
+    ./sunshine.nix
   ];
 }
