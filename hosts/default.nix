@@ -17,7 +17,6 @@ let
 
           # Common modules
           ../nixosModules
-          inputs.nix-index-database.nixosModules.nix-index
         ];
       }
     );

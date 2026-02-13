@@ -10,5 +10,4 @@ _: {
     ./zoxide.nix
     ./plasma.nix
   ];
-  programs.nix-index.enable = true;
 }
