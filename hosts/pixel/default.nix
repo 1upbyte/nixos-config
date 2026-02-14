@@ -7,6 +7,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../nixosModules/programs/hacking
   ];
 
   # Required for the VirtIO-GPU 3D pipeline to initialize

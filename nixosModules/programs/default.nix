@@ -8,5 +8,8 @@ _: {
     ./tailscale.nix
     ./helium.nix
     ./sunshine.nix
+    ./uv.nix
+    ./kerberos.nix
+    ./gcc.nix
   ];
 }
