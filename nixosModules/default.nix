@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   imports = [
     ./network
@@ -22,7 +22,7 @@
       "udev.log_level=3"
     ];
     # Use latest kernel
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
     # Enable systemd in phase 1. Used for unlocking root partition with FIDO2/TPM
     initrd.systemd.enable = true;
     # Use the systemd-boot EFI boot loader.

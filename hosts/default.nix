@@ -25,7 +25,7 @@ in
 {
   flake.nixosConfigurations = mkNixosConfigurations [
     # "doraemon"
-    # "dorami"
+    "mbp"
     "pixel"
   ];
 }

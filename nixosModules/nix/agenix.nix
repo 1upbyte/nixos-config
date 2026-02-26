@@ -21,6 +21,13 @@
     mode = "440";
     group = "users";
   };
+  
+  age.secrets.passwd-mbp = {
+    file = ../../secrets/passwd-mbp.age;
+    mode = "440";
+    group = "users";
+  };
+  
   environment.systemPackages = [
     inputs.agenix.packages.${pkgs.system}.default
     pkgs.age-plugin-yubikey

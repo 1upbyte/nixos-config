@@ -33,7 +33,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     }; 
-  
+    
+    nixos-apple-silicon = {
+      url = "github:tpwrules/nixos-apple-silicon";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };  
   };
 
   outputs =
@@ -42,7 +46,7 @@
       imports = [
         ./hosts
       ];
-      systems = [ "x86_64-linux" ];
+      systems = [ "x86_64-linux" "aarch64-linux" ];
       perSystem =
         { pkgs, ... }:
         {
