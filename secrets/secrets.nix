@@ -5,7 +5,7 @@ let
   users = [ doraemon mbp pixel ];
 in
 {
-  "passwd-pixel.age".publicKeys = [ pixel ];
-  "passwd-mbp.age".publicKeys = [ mbp ];
+  "passwd-pixel.age".publicKeys = users;
+  "passwd-mbp.age".publicKeys = users;
   "tailscale.age".publicKeys = users;
 }
