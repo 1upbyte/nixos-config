@@ -2,6 +2,7 @@
   inputs,
   config,
   hostname,
+  lib, 
   ...
 }:
 {
@@ -24,6 +25,8 @@
       "149.112.112.112#dns.quad9.net"
     ];
   };
+
+  hardware.bluetooth.enable = lib.mkForce false;  
 
   # Set your time zone.
   time.timeZone = "America/New_York";

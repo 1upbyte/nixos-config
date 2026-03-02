@@ -9,5 +9,6 @@ _: {
     ./bash.nix
     ./zoxide.nix
     ./plasma.nix
+    ./vscode
   ];
 }

@@ -10,5 +10,6 @@ _: {
     ./uv.nix
     ./kerberos.nix
     ./gcc.nix
+    ./librepods.nix
   ];
 }

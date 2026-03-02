@@ -10,6 +10,9 @@
     setupAsahiSound = true;
   };
 
+
+  boot.loader.efi.canTouchEfiVariables = lib.mkForce false;
+
   zramSwap = {
     enable = true;
     memoryPercent = 100;
@@ -42,7 +45,14 @@
     ];
   };
 
-  hardware.apple.touchBar.enable = true;
+  hardware.apple.touchBar = {
+    enable = true;
+    settings = {
+      MediaLayerDefault = true;
+    };
+  };
+  
+  boot.extraModprobeConfig = "options hid_apple swap_opt_cmd=1 swap_fn_leftctrl=1";
 
   users.users.${username}.hashedPasswordFile = lib.mkForce "${config.age.secrets.passwd-mbp.path}";
 
