@@ -5,7 +5,7 @@
     settings = {
       default_session = {
         # 'dbus-run-session' ensures Plasma has a bus to talk to the GPU/Display
-        command = "${pkgs.dbus}/bin/dbus-run-session ${pkgs.greetd}/bin/agreety --cmd startplasma-wayland";
+        command = "${pkgs.dbus}/bin/dbus-run-session ${pkgs.greetd}/bin/agreety --cmd start-hyprland";
         user = "greeter";
       };
     };
