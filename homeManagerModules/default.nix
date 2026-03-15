@@ -6,7 +6,6 @@
 {
   imports = [
     ./programs
-    ./catppuccin.nix
     ./avatar.nix
   ];
 

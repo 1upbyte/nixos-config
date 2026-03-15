@@ -43,6 +43,10 @@
     git
     acpi
   ];
+
+  fonts.packages = with pkgs; [
+    cascadia-code
+  ];
   
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];

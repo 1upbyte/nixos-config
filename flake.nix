@@ -19,7 +19,10 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    catppuccin.url = "github:catppuccin/nix";
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }; 
 
     helix.url = "github:helix-editor/helix";
 
