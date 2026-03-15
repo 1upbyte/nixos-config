@@ -1,7 +1,7 @@
 _: {
   imports = [
     ./chromium.nix
-    ./foot.nix
+    ./kitty.nix
     ./bat.nix
     ./git.nix
     ./yazi.nix
@@ -10,5 +10,8 @@ _: {
     ./zoxide.nix
     ./plasma.nix
     ./vscode
+    ./hyprland
+    ./wofi.nix
+    ./waybar.nix
   ];
 }
